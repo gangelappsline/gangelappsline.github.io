@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/all.css" />
+    <title>Angel Garcia | Portfolio</title>
+  </head>
+  <body class="bg-dark-gray">
+    <header class="w-full py-6 fixed top-0 left-0 px-10">
+      <nav class="flex justify-between items-center">
+        <div class="logo fira-code text-white font-bold text-xl">
+          Angel Garcia
+        </div>
+        <ul class="flex gap-4 items-center text-white">
+          <li>
+            <a href="#about"
+              ><span class="text-green-app fira-code">01.</span> About</a
+            >
+          </li>
+          <li>
+            <a href="#experience"
+              ><span class="text-green-app fira-code">02.</span> Experience</a
+            >
+          </li>
+          <li>
+            <a href="#work"
+              ><span class="text-green-app fira-code">03.</span> Work</a
+            >
+          </li>
+          <li>
+            <a href="#contact"
+              ><span class="text-green-app fira-code">04.</span> Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="w-full p-6 md:p-0 md:max-w-4xl mx-auto">
+      <section class="w-full flex flex-col gap-8 min-h-screen justify-center">
+        <span class="fira-code text-green-app">Hi, my name is</span>
+        <h2 class="text-5xl font-bold text-gray-light">Angel Garcia</h2>
+        <h2 class="text-5xl font-bold text-gray-dark">
+          I build things for the web and mobile.
+        </h2>
+        <p class="w-4/6 text-gray-dark text-lg">
+          I’m a software engineer specializing in building (and occasionally
+          designing) exceptional digital experiences. Currently, I’m focused on
+          building accessible, human-centered products at
+          <span class="fira-code text-green-app">Appsline.</span>
+        </p>
+        <p class="mt-4">
+          <a
+            href=""
+            class="px-5 py-3 text-green-app border rounded-md border-green-app"
+            >Download resume</a
+          >
+        </p>
+      </section>
+      <section
+        id="about"
+        class="w-full flex flex-col gap-8 min-h-screen justify-center"
+      >
+        <div class="w-full grid grid-cols-12 gap-6">
+          <div class="col-span-12 md:col-span-8 items-center gap-4">
+            <div class="w-full flex items-center gap-6">
+              <span class="fira-code text-green-app text-3xl">01.</span>
+              <h2 class="text-3xl text-gray-light">About Me</h2>
+              <hr class="border-b border-gray-dark grow" />
+            </div>
+            <div class="w-full">
+              <p class="text-gray-light mb-4 mt-4 text-lg">
+                Hello! My name is Brittany and I enjoy creating things that live
+                on the internet. My interest in web development started back in
+                2012 when I decided to try editing custom Tumblr themes — turns
+                out hacking together a custom reblog button taught me a lot
+                about HTML & CSS!
+              </p>
+
+              <p class="text-gray-light mb-4 text-lg">
+                Fast-forward to today, and I’ve had the privilege of working at
+                an advertising agency, a start-up, a huge corporation, and a
+                student-led design studio. My main focus these days is building
+                accessible, inclusive products and digital experiences at
+                Upstatement for a variety of clients.
+              </p>
+
+              <p class="text-gray-light mb-4 text-lg">
+                I also recently launched a course that covers everything you
+                need to build a web app with the Spotify API using Node & React.
+              </p>
+
+              <p class="text-gray-light mb-4 text-lg">
+                Here are a few technologies I’ve been working with recently:
+              </p>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-4">
+            <div class="w-68 h-68 bg-green-app rounded-md">
+              <img
+                src="./assets/images/me.jpg"
+                class="rounded-md w-full h-full object-cover mix-blend-multiply hover:mix-blend-normal transaction hover:grayscale-0 grayscale"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="experience"
+        class="w-full flex flex-col md:p-0 gap-8 min-h-screen justify-center"
+      >
+        <div class="w-full">
+          <div class="w-full flex items-center gap-6">
+            <span class="fira-code text-green-app text-3xl">02.</span>
+            <h2 class="text-3xl text-gray-light">Where I’ve Worked</h2>
+            <hr class="border-b border-gray-dark w-52" />
+          </div>
+          <div class="py-6 flex flex-col justify-center sm:py-12">
+            <section class="max-w-full lg:container mx-auto space-y-8">
+              <div
+                class="flex flex-col md:flex-row items-stretch overflow-x-hidden justify-center w-full md:max-w-4xl space-x-12"
+                x-data="{tab: 1}"
+              >
+                <div class="flex overflow-x-scroll md:overflow-none md:flex-col justify-start w-full max-w-full md:w-1/4 md:space-y-4">
+                  <a
+                    class="px-4 py-2 text-sm"
+                    :class="{'z-20 border-l-2 transform translate-x-2 border-green-app font-bold text-gray-light': tab === 1, ' transform text-gray-dark -translate-x-2': tab !== 1}"
+                    href="#"
+                    @click.prevent="tab = 1"
+                  >
+                    The Spanish Group
+                  </a>
+                  <a
+                    class="px-4 py-2 text-sm"
+                    :class="{'z-20 border-l-2 transform translate-x-2 border-green-app font-bold text-gray-light': tab === 2, ' transform text-gray-dark -translate-x-2': tab !== 2}"
+                    href="#"
+                    @click.prevent="tab = 2"
+                    @click.prevent="tab = 2"
+                  >
+                    Wittan Technologies
+                  </a>
+                  <a
+                    class="px-4 py-2 text-sm"
+                    :class="{'z-20 border-l-2 transform translate-x-2 border-green-app font-bold text-gray-light': tab === 3, ' transform text-gray-dark -translate-x-2': tab !== 3}"
+                    href="#"
+                    @click.prevent="tab = 3"
+                    @click.prevent="tab = 3"
+                  >
+                    Scytl Electronic
+                  </a>
+                  <a
+                    class="px-4 py-2 text-sm"
+                    :class="{'z-20 border-l-2 transform translate-x-2 border-green-app font-bold text-gray-light': tab === 4, ' transform text-gray-dark -translate-x-2': tab !== 4}"
+                    href="#"
+                    @click.prevent="tab = 4"
+                    @click.prevent="tab = 4"
+                  >
+                    CLIP
+                  </a>
+                  <a
+                    class="px-4 py-2 text-sm"
+                    :class="{'z-20 border-l-2 transform translate-x-2 border-green-app font-bold text-gray-light': tab === 5, ' transform text-gray-dark -translate-x-2': tab !== 5}"
+                    href="#"
+                    @click.prevent="tab = 5"
+                    @click.prevent="tab = 5"
+                  >
+                    GrainChain
+                  </a>
+                  <a
+                    class="px-4 py-2 text-sm"
+                    :class="{'z-20 border-l-2 transform translate-x-2 border-green-app font-bold text-gray-light': tab === 6, ' transform text-gray-dark -translate-x-2': tab !== 6}"
+                    href="#"
+                    @click.prevent="tab = 6"
+                    @click.prevent="tab = 6"
+                  >
+                    Envia.com
+                  </a>
+                  <a
+                    class="px-4 py-2 text-sm"
+                    :class="{'z-20 border-l-2 transform translate-x-2 border-green-app font-bold text-gray-light': tab === 7, ' transform text-gray-dark -translate-x-2': tab !== 7}"
+                    href="#"
+                    @click.prevent="tab = 7"
+                    @click.prevent="tab = 7"
+                  >
+                    Fenix Me
+                  </a>
+                  <a
+                    class="px-4 py-2 text-sm"
+                    :class="{'z-20 border-l-2 transform translate-x-2 border-green-app font-bold text-gray-light': tab === 8, ' transform text-gray-dark -translate-x-2': tab !== 8}"
+                    href="#"
+                    @click.prevent="tab = 8"
+                    @click.prevent="tab = 8"
+                  >
+                    Arenso
+                  </a>
+                  <a
+                    class="px-4 py-2 text-sm"
+                    :class="{'z-20 border-l-2 transform translate-x-2 border-green-app font-bold text-gray-light': tab === 9, ' transform text-gray-dark -translate-x-2': tab !== 9}"
+                    href="#"
+                    @click.prevent="tab = 9"
+                    @click.prevent="tab = 9"
+                  >
+                    MAPA
+                  </a>
+                </div>
+                <div class="w-full md:w-3/4">
+                  <div class="space-y-6" x-show="tab === 1">
+                    <h3
+                      class="text-xl text-gray-light mb-2 font-bold leading-tight"
+                      x-show="tab === 1"
+                      x-transition:enter="transition duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Lead Developer
+                      <a
+                        href="https://thespanishgroup.org/"
+                        target="_blank"
+                        class="text-green-app"
+                        >@The Spanish Group</a
+                      >
+                    </h3>
+                    <p
+                      class="text-base text-gray-dark"
+                      x-show="tab === 1"
+                      x-transition:enter="transition delay-100 duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      June 2022 - Present. Los Angeles, California.
+                    </p>
+                    <ul class="flex flex-col gap-4">
+                      <li class="text-base relative pl-6 text-gray-light">
+                        As a Development Lead at TSG, I coordinated a team of
+                        five developers, ensuring efficient execution aligned
+                        with business objectives. I focused on refactoring and
+                        optimizing critical functions, eliminating bottlenecks,
+                        and improving platform performance.
+                      </li>
+                      <li class="text-base relative pl-6 text-gray-light">
+                        Additionally, I conducted audits of tickets generated by
+                        the sales team, translators, and international clients,
+                        ensuring quality and accuracy. I also provided direct
+                        support to platform users through virtual meetings and
+                        phone calls, ensuring a prompt and effective response to
+                        their needs.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="space-y-6" x-show="tab === 2">
+                    <h3
+                      class="text-xl text-gray-light mb-2 font-bold leading-tight"
+                      x-show="tab === 2"
+                      x-transition:enter="transition duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Lead Developer
+                      <a
+                        href="https://www.witann.com/"
+                        target="_blank"
+                        class="text-green-app"
+                        >@Witann Technologies</a
+                      >
+                    </h3>
+                    <p
+                      class="text-base text-gray-dark"
+                      x-show="tab === 2"
+                      x-transition:enter="transition delay-100 duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      May 2021 - June 2022. Colima, Colima.
+                    </p>
+                    <ul class="flex flex-col gap-4">
+                      <li class="text-base relative pl-6 text-gray-light">
+                        I manage a team of 8 people including programmers,
+                        designers and sales personnel. We hold daily meetings to
+                        keep up to date with team activities and find out if
+                        there is something stopping the work flow. We work on
+                        two-week sprints contemplating Thursday for progress
+                        deliveries and Friday for planning at the end of the
+                        sprint. I have the responsibility of developing 2
+                        simultaneous projects with Laravel, Vue, Angular,
+                        GraphQL and support by sharing good practices in the
+                        stoppers of my colleagues.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="space-y-6" x-show="tab === 3">
+                    <h3
+                      class="text-xl text-gray-light mb-2 font-bold leading-tight"
+                      x-show="tab === 3"
+                      x-transition:enter="transition duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Front End Developer
+                      <a
+                        href="https://scytl.com/"
+                        target="_blank"
+                        class="text-green-app"
+                        >@Scytl Electronic voting company</a
+                      >
+                    </h3>
+                    <p
+                      class="text-base text-gray-dark"
+                      x-show="tab === 3"
+                      x-transition:enter="transition delay-100 duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Feb 2021 - May 2021. Colima, Colima.
+                    </p>
+                    <ul class="flex flex-col gap-4">
+                      <li class="text-base relative pl-6 text-gray-light">
+                        4-month temporary project in which we migrated the
+                        online voting system from Angular 1 to VUE JS 3,
+                        applying unit and integration tests to streamline the
+                        deployments to production.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="space-y-6" x-show="tab === 4">
+                    <h3
+                      class="text-xl text-gray-light mb-2 font-bold leading-tight"
+                      x-show="tab === 4"
+                      x-transition:enter="transition duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Full-Stack Developer
+                      <a
+                        href="https://www.clip.mx/"
+                        target="_blank"
+                        class="text-green-app"
+                        >@CLIP</a
+                      >
+                    </h3>
+                    <p
+                      class="text-base text-gray-dark"
+                      x-show="tab === 4"
+                      x-transition:enter="transition delay-100 duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Nov 2019 - Jun 2020. Guadalajara, Jalisco.
+                    </p>
+                    <ul class="flex flex-col gap-4">
+                      <li class="text-base relative pl-6 text-gray-light">
+                        I was working on disbursement & blacklist features using
+                        micro front/ end services with React, Node Js and java
+                        deployed on AWS ECS, using continuos integration with
+                        Jenkins, Sonar and implement coordination with another
+                        teams related with the activities of my team.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="space-y-6" x-show="tab === 5">
+                    <h3
+                      class="text-xl text-gray-light mb-2 font-bold leading-tight"
+                      x-show="tab === 5"
+                      x-transition:enter="transition duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Full-Stack Developer
+                      <a
+                        href="https://www.grainchain.io/"
+                        target="_blank"
+                        class="text-green-app"
+                        >@GrainChain</a
+                      >
+                    </h3>
+                    <p
+                      class="text-base text-gray-dark"
+                      x-show="tab === 5"
+                      x-transition:enter="transition delay-100 duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Feb 2019 - Nov 2019. Guadalajara, Jalisco.
+                    </p>
+                    <ul class="flex flex-col gap-4">
+                      <li class="text-base relative pl-6 text-gray-light">
+                        We built an API with Node JS and PHP for made to
+                        facilitate the sale of farmers' crops from united states
+                        based on microservices to be consumed by native mobile
+                        applications and using dwolla for secure payment method.
+                        In addition to creating the necessary views for sending
+                        emails through the notification microservice. We use
+                        agile methodologies and continuous integration for a
+                        more efficient project deployment.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="space-y-6" x-show="tab === 6">
+                    <h3
+                      class="text-xl text-gray-light mb-2 font-bold leading-tight"
+                      x-show="tab === 6"
+                      x-transition:enter="transition duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Full-Stack Developer
+                      <a
+                        href="https://envia.com/"
+                        target="_blank"
+                        class="text-green-app"
+                        >@Envia.com</a
+                      >
+                    </h3>
+                    <p
+                      class="text-base text-gray-dark"
+                      x-show="tab === 6"
+                      x-transition:enter="transition delay-100 duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Apr 2018 - Feb 2019. Monterrey, Nuevo Leon.
+                    </p>
+                    <ul class="flex flex-col gap-4">
+                      <li class="text-base relative pl-6 text-gray-light">
+                        worked in the maintenance and optimization of a
+                        logistics web system developed with the Codeigniter,
+                        Laravel frameworks, integrating ecommerce modules
+                        (Magento, big commerce, woo commerce, shopify, etc) to
+                        the main application to expand user tools and facilitate
+                        the stores belonging to those modules are available to
+                        use the platform features from their portals.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="space-y-6" x-show="tab === 7">
+                    <h3
+                      class="text-xl text-gray-light mb-2 font-bold leading-tight"
+                      x-show="tab === 7"
+                      x-transition:enter="transition duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Full-Stack Developer
+                      <a href="" target="_blank" class="text-green-app"
+                        >@Fenix Me</a
+                      >
+                    </h3>
+                    <p
+                      class="text-base text-gray-dark"
+                      x-show="tab === 7"
+                      x-transition:enter="transition delay-100 duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Agu 2017 - Apr 2018. Colima, Mexico.
+                    </p>
+                    <ul class="flex flex-col gap-4">
+                      <li class="text-base relative pl-6 text-gray-light">
+                        Front end development with Angular of an incident
+                        management system which carried out audits so that the
+                        employees of a mining company were careful and aware of
+                        the correct use of the security equipment. Generating
+                        reports of the different areas of the company sections.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="space-y-6" x-show="tab === 8">
+                    <h3
+                      class="text-xl text-gray-light mb-2 font-bold leading-tight"
+                      x-show="tab === 8"
+                      x-transition:enter="transition duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Full-Stack Developer
+                      <a
+                        href="https://arenso.dev/"
+                        target="_blank"
+                        class="text-green-app"
+                        >@Arenso</a
+                      >
+                    </h3>
+                    <p
+                      class="text-base text-gray-dark"
+                      x-show="tab === 8"
+                      x-transition:enter="transition delay-100 duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Feb 2015 - Apr 2017. Colima, Mexico.
+                    </p>
+                    <ul class="flex flex-col gap-4">
+                      <li class="text-base relative pl-6 text-gray-light">
+                        Development full stack of an administrative system for
+                        an automotive company which managed appointments and
+                        consumption and purchase spare parts. This system is
+                        completely dynamic from the labels, languages, also you
+                        can activate or deactivate modules regardless of the
+                        type of user.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="space-y-6" x-show="tab === 9">
+                    <h3
+                      class="text-xl text-gray-light mb-2 font-bold leading-tight"
+                      x-show="tab === 9"
+                      x-transition:enter="transition duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Full-Stack Developer
+                      <a
+                        href="https://scytl.com/"
+                        target="_blank"
+                        class="text-green-app"
+                        >@MAPA</a
+                      >
+                    </h3>
+                    <p
+                      class="text-base text-gray-dark"
+                      x-show="tab === 9"
+                      x-transition:enter="transition delay-100 duration-500 transform ease-in"
+                      x-transition:enter-start="opacity-0"
+                    >
+                      Oct 2013 - Feb 2015. Colima, Mexico.
+                    </p>
+                    <ul class="flex flex-col gap-4">
+                      <li class="text-base relative pl-6 text-gray-light">
+                        I made multiple apps based on geolocation (Google maps
+                        services), POS, CRM made with Laravel framework (PHP)
+                        and developed a hybrid mobile application similar to
+                        Uber, called Chofer Pro with IONIC Framework.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section
+        id="work"
+        class="w-full flex flex-col gap-8 min-h-screen justify-center"
+      >
+      <div class="w-full">
+          <div class="w-full flex items-center gap-6">
+            <span class="fira-code text-green-app text-3xl">03.</span>
+            <h2 class="text-3xl text-gray-light">Some Things I’ve Built</h2>
+            <hr class="border-b border-gray-dark w-44" />
+          </div>
+    </section>
+      <section
+        id="contact"
+        class="w-full flex flex-col gap-8 min-h-screen justify-center"
+      >
+        <div class="max-w-2xl mx-auto">
+          <p class="text-green-app text-center my-6">
+            <span class="fire-code">04.</span> What’s Next?
+          </p>
+          <h2 class="text-5xl text-center text-gray-light my-6 font-bold">
+            Get In Touch
+          </h2>
+          <p class="text-center text-gray-light my-8 text-lg">
+            Every project is a challenge, and with every challenge, there are
+            new things to learn. If you have a project you want to make a
+            reality and we can complete together, contact me and we'll talk
+            about it.
+          </p>
+          <p class="text-center">
+            <a
+              href="mailto:g.angel@appsline.com.mx"
+              class="px-5 py-3 mt-4 rounded-md border border-green-app text-green-app"
+              >Say Hello</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <div class="block md:fixed left-10 bottom-0 w-[40px]">
+      <ul class="flex flex-col items-center gap-6">
+        <li>
+          <a href="" class="text-gray-light text-xl hover:text-green-app"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a href="" class="text-gray-light text-xl hover:text-green-app"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="" class="text-gray-light text-xl hover:text-green-app"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+        </li>
+        <li>
+          <a href="" class="text-gray-light text-xl hover:text-green-app"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+        </li>
+        <li>
+          <a href="" class="text-gray-light text-xl hover:text-green-app"
+            ><i class="fa-brands fa-codepen"></i
+          ></a>
+        </li>
+        <li><div class="h-32 w-0 border border-gray-dark"></div></li>
+      </ul>
+    </div>
+    <div class="block md:fixed right-10 bottom-0 w-[40px]">
+      <ul class="flex flex-col items-center gap-4">
+        <li><a href="mailto:g.angel@appsline.com.mx" class="vertical-text fira-code text-gray-light hover:text-green-app">g.angel@appsline.com.mx</a></li>
+        <li><div class="h-32 w-0 border border-gray-dark"></div></li>
+      </ul>
+    </div>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </body>
+</html>
