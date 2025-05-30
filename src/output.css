@@ -237,6 +237,9 @@
   .grid {
     display: grid;
   }
+  .table {
+    display: table;
+  }
   .h-32 {
     height: calc(var(--spacing) * 32);
   }
@@ -251,6 +254,9 @@
   }
   .w-0 {
     width: calc(var(--spacing) * 0);
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
   }
   .w-4\/6 {
     width: calc(4/6 * 100%);
@@ -276,8 +282,14 @@
   .max-w-full {
     max-width: 100%;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .grow {
     flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
   }
   .-translate-x-2 {
     --tw-translate-x: calc(var(--spacing) * -2);
@@ -289,6 +301,9 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -448,14 +463,24 @@
   .text-white {
     color: var(--color-white);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .opacity-0 {
     opacity: 0%;
   }
   .mix-blend-multiply {
     mix-blend-mode: multiply;
   }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .grayscale {
     --tw-grayscale: grayscale(100%);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .transition {
@@ -550,6 +575,11 @@
       }
     }
   }
+  .md\:overflow-hidden {
+    @media (width >= 48rem) {
+      overflow: hidden;
+    }
+  }
   .md\:p-0 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 0);
@@ -573,6 +603,11 @@
       @media (width >= 96rem) {
         max-width: 96rem;
       }
+    }
+  }
+  .lg\:overflow-hidden {
+    @media (width >= 64rem) {
+      overflow: hidden;
     }
   }
 }
@@ -654,6 +689,11 @@ section ul li::before {
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -731,6 +771,7 @@ section ul li::before {
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
